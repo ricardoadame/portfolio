@@ -1,0 +1,346 @@
+/* Body Settings */
+
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+body{
+	background: rgb(255, 255, 255); 
+	color: rgb(33, 33, 33);
+	font-family: "Karla", sans-serif;
+	margin: 0 auto;
+	width: 100vw;
+}
+
+@media (max-width: 40rem) {
+	body{
+		font-size: 1.125rem;
+	}
+}
+
+/* Type */
+
+h1 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+@media (max-width: 40rem) {
+	h1 {
+	  font-size: 2rem;
+	}
+}
+@media (min-width: 40rem) {
+	h1 {
+	  font-size: 4rem;
+	}
+}
+
+p{
+	margin-bottom: 1.5rem;
+}
+
+a{
+	color: rgb(41, 98, 255);
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+/* Global */
+
+header, section{
+	display: grid;
+	margin: 0 auto;
+}
+
+@media (max-width: 40rem) {
+	header, section{
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+@media (min-width: 40rem) and (max-width: 62rem){
+	header, section{
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}
+
+@media (min-width: 62rem) {
+	section{
+		max-width: 52.88rem;
+	}
+}
+
+
+/* Header */
+
+header{
+	align-items: center;
+	justify-content: center;
+}
+
+header a{
+	display: inline-flex;
+	justify-content: center;
+}
+
+header a.social{
+	opacity: 0.4;
+}
+header a.social:hover{
+	opacity: 0.6;
+}
+header a.social:active{
+	opacity: 1;
+}
+
+@media (max-width: 40rem){
+	header{
+		grid-template-columns: 70% repeat(2, 1fr);
+		padding-top: 2.5rem;
+	}
+
+	header a.brand{
+		max-width: 2rem;
+	}
+
+	header a.social img{
+		width: 1rem;
+	}
+}
+
+@media (min-width: 40rem) and (max-width: 62rem){
+	header{
+		grid-template-columns: 80% repeat(2, 1fr);
+		padding-top: 5rem;
+	}
+
+	header a.brand{
+		max-width: 4rem;
+	}
+
+	header a.social img{
+		width: 1.5rem;
+	}
+}
+
+@media (min-width: 62rem) {
+	header{
+		grid-template-columns: 90% repeat(2, 1fr);
+		max-width: 82rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 5rem;
+	}
+
+	header a.brand{
+		max-width: 4rem;
+	}
+
+	header a.social img{
+		width: 1.5rem;
+	}
+}
+
+/* Intro */
+
+@media (max-width: 40rem){
+	section.intro{
+		padding-top: 2.5rem;
+	}
+}
+
+@media (min-width: 40rem) and (max-width: 62rem){
+	section.intro{
+		padding-top: 5rem;
+	}
+
+	section.intro a{
+		font-size: 1.5rem;
+	}
+}
+@media (min-width: 62rem){
+	section.intro{
+		justify-content: initial;
+		padding-top: 5rem;
+	}
+
+	section.intro h1{
+		max-width: 47.5rem;
+	}
+
+	section.intro a{
+		font-size: 1.5rem;
+	}
+}
+
+/* Portfolio Section */
+
+section.portfolio {
+  grid-gap: 1.5rem;
+}
+
+section.portfolio .item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section.portfolio .item a{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+section.portfolio .item .facturama {
+  background-image: url(https://cdn.dribbble.com/users/290211/screenshots/3615909/facturama-home-3.0.jpg);
+}
+
+section.portfolio .item .be-dress {
+  background-image: url(https://cdn.dribbble.com/users/290211/screenshots/4319553/be-dress-landing-page-02.jpg);
+}
+
+section.portfolio .item .godinez {
+  background-image: url(https://cdn.dribbble.com/users/290211/screenshots/3717716/godinez-homepage.jpg);
+}
+
+section.portfolio .item .spartans {
+  background-image: url(https://cdn.dribbble.com/users/290211/screenshots/2460758/spartans-logo.png);
+}
+
+section.portfolio .item .hh {
+  background-image: url(https://cdn.dribbble.com/users/290211/screenshots/2943388/healing-harm-np.jpg);
+}
+
+@media (max-width: 40rem){
+	section.portfolio{
+		grid-template-rows: repeat(5, minmax(18rem, 1fr));
+		padding-top: 2.5rem;
+	}
+
+	section.portfolio .item{
+	  grid-column: span 1;
+	}
+	section.portfolio .item a:active {
+	  -webkit-transform: scale(1.015);
+	          transform: scale(1.015);
+	}
+
+}
+
+@media (min-width: 40rem) and (max-width: 62rem){
+	section.portfolio{
+		grid-template-rows: repeat(4, minmax(19.25rem, 1fr));
+	  grid-template-columns: repeat(2, 1fr);
+		padding-top: 3rem;
+	}
+
+	section.portfolio .item.large{
+		grid-row: span 2;
+	  grid-column: span 2;
+	  height: 
+	}
+	section.portfolio .item.small {
+	  grid-row: span 1;
+	  grid-column: span 1;
+	}
+
+	section.portfolio .item a:hover {
+	  box-shadow: 0px 16px 80px -48px #212121;
+	  -webkit-transform: scale(1.015);
+	          transform: scale(1.015);
+	}
+
+}
+
+@media (min-width: 62rem) {
+	section.portfolio{
+		grid-template-rows: repeat(2, minmax(12.13rem, 1fr));
+	  grid-template-columns: repeat(4, 1fr);
+		padding-top: 3rem;
+	}
+
+	section.portfolio .item.large{
+		grid-row: span 2;
+	  grid-column: span 2;
+	}
+	section.portfolio .item.small {
+	  grid-row: span 1;
+	  grid-column: span 1;
+	}
+	
+	section.portfolio .item a:hover {
+	  box-shadow: 0px 16px 80px -48px #212121;
+	  -webkit-transform: scale(1.015);
+	          transform: scale(1.015);
+	}
+}
+
+
+/* Footer */
+
+section.footer{
+	justify-content: end;
+	padding-top: 1.5rem;
+}
+
+section.footer a{
+	background-image: url(../img/arrow.svg);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-right: 1.5rem;
+}
+
+@media (max-width: 40rem){
+	section.footer{
+		padding-bottom: 2.5rem;
+	}
+}
+@media (min-width: 40rem) and (max-width: 62rem){
+	section.footer{
+		padding-bottom: 5rem;
+	}
+}
+@media (min-width: 62rem){
+	section.footer{
+		padding-bottom: 5rem;
+	}
+
+	section.footer a:hover{
+		padding-right: 2rem;
+	}
+}
+
+
+/* Utilities */
+
+.is-text-primary{
+	color: rgb(41, 98, 255);
+}
+
+/* Smooth transitions */
+
+a, input, button, img, textarea,
+a:hover, input:hover, button:hover, img:hover, textarea:hover{
+	transition: all 0.25s ease-in-out;
+}
+
+#services{
+	transition: all 1s ease-in-out;
+}
